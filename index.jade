@@ -1,0 +1,32 @@
+doctype html
+html(ng-app='app')
+  head
+    title= title
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/normalize.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css')
+    link(rel='stylesheet', href='/client/_build/css/app.css')
+    
+  body
+    nav.top-bar(data-topbar='', role='navigation')
+      ul.title-area
+        li.name
+          h1
+            a 404 Test
+      section.top-bar-section
+        ul.left
+          li
+            a(href='#/') Main
+
+    section(role='main')
+      .row.margin-lg
+        div(ng-view='')
+
+    script(src='/node_modules/angular/angular.js')
+    script(src='/node_modules/lodash/index.js')
+    script(src='/node_modules/restangular/dist/restangular.js')
+    script(src='/node_modules/angular-route/angular-route.min.js')
+    script(src='/node_modules/moment/min/moment.min.js')
+    script(src='/_build/js/main.js')
+    
+    #loggedIn(style='display:none;') true

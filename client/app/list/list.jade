@@ -1,0 +1,23 @@
+.row.margin-md
+  label.w300.pull-left Filter
+    input(ng-model="filter", type="text")  
+
+.row.margin-md
+  input.w300.pull-left(ng-model='name', type='text')
+  button.btn(ng-click='add()', ng-disabled='!canAdd()') Add Row
+
+.row.margin-md  
+  table
+    thead
+      tr
+        td TimeZone
+        td UserName
+        td
+        
+    tbody
+      tr(ng-repeat="item in data | filterByName : filter")
+        td {{::item.time | date : 'H:mm:ss Z'}}
+        td {{::item.name}}
+        td 
+          button.btn(ng-click='remove(item)') Remove
+

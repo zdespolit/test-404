@@ -1,0 +1,33 @@
+
+button.btn{
+  padding: 0.6rem 1rem;
+  margin-bottom: 0;
+}
+
+ul{
+  list-style-type: none;
+}
+
+.w300{
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+.w600, .w600 table{
+  width: 600px;
+}
+
+.pull-right{
+  float:right;
+}
+
+.margin-md{
+  margin: 20px;
+}
+
+.margin-lg {
+  margin: 3rem 6rem;
+  form {
+    padding: 0;
+  }
+}
